@@ -1,8 +1,4 @@
-from widget import get_date
-from datetime import datetime
-
-
-def filter_by_state(list_dicts: list, key_value: str = 'EXECUTED') -> list:
+def filter_by_state(list_dicts: list, key_value: str = "EXECUTED") -> list:
     """Функция, которая сортирует список словарей по ключу"""
     sorted_list_dicts = []
 
