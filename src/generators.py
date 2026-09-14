@@ -1,7 +1,7 @@
-from typing import Iterable
+from typing import Generator
 
 
-def filter_by_currency(list_transactions: list, currency: str = "USD") -> Iterable:
+def filter_by_currency(list_transactions: list, currency: str = "USD") -> Generator[str, None, None]:
     """Функция, которая поочередно выдает транзакции по заданной валюте"""
     for coll in list_transactions:
         if coll["operationAmount"]["currency"]["code"] == "USD":
