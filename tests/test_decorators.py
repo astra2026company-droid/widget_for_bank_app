@@ -1,9 +1,11 @@
-from src.decorators import log
 import pytest
+
+from src.decorators import log
 
 
 def test_log_in_console(capsys):
     """Функция, которая проверяет, что декоратор отрабатывает запись в консоль"""
+
     @log()
     def say_hi(name):
         return f"Hi, {name}"
@@ -21,9 +23,7 @@ def test_log_in_file():
 
     say_hi("Max")
 
-    with open("./data/logs.txt", 'r', encoding="UTF-8") as file:
+    with open("./data/logs.txt", "r", encoding="UTF-8") as file:
         result = file.read()
 
         assert result == "Result working say_hi - Hi, Max"
-
-

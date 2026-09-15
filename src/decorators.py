@@ -3,6 +3,7 @@ from functools import wraps
 
 def log(filename: str = "console") -> None:
     """Функция - декоратор, которая логирует выполнение функции в консоль либо в файл"""
+
     def log_decorator(function):
         @wraps(function)
         def wrapper(*args, **kwargs):
@@ -16,7 +17,7 @@ def log(filename: str = "console") -> None:
             if filename == "console":
                 print(result_working_func)
             else:
-                with open(filename, 'w', encoding="UTF-8") as file:
+                with open(filename, "w", encoding="UTF-8") as file:
                     file.write(result_working_func)
             return result
 
