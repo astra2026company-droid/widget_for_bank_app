@@ -1,5 +1,4 @@
 from functools import wraps
-from typing import Optional
 
 
 def log(filename: str = "console") -> None:
